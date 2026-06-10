@@ -1,109 +1,284 @@
 {
-	"info": {
-		"_postman_id": "a1b2c3d4-e5f6-7890-1234-56789abcdef0",
-		"name": "API SmartRanking - Players",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "Players",
-			"item": [
-				{
-					"name": "Create/Update Player",
-					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"João da Silva\",\n  \"email\": \"joao.silva@email.com\",\n  \"phoneNumber\": \"+5511999999999\"\n}"
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/v1/players",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"players"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get All Players",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/players",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"players"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Player By Email",
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/players/joao.silva@email.com",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"players",
-								"joao.silva@email.com"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete Player",
-					"request": {
-						"method": "DELETE",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/v1/players/joao.silva@email.com",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"v1",
-								"players",
-								"joao.silva@email.com"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		}
-	]
+    "info": {
+        "_postman_id": "a1b2c3d4-e5f6-7890-1234-56789abcdef0",
+        "name": "API SmartRanking - Players",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Players",
+            "item": [
+                {
+                    "name": "Create/Update Player",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"João da Silva\",\n  \"email\": \"joao.silva@email.com\",\n  \"phoneNumber\": \"+5511999999999\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/v1/players",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "v1",
+                                "players"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get All Players",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/v1/players",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "v1",
+                                "players"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Get Player By Email",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/v1/players/joao.silva@email.com",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "v1",
+                                "players",
+                                "joao.silva@email.com"
+                            ]
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete Player",
+                    "request": {
+                        "method": "DELETE",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:3000/api/v1/players/joao.silva@email.com",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "v1",
+                                "players",
+                                "joao.silva@email.com"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Categories",
+            "item": [
+                {
+                    "name": "Payload Examples (Categories)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "// Insert/Update Category\n// Consult Categories\n// Delete Categories\n\n[{\n\t\"_id\": \"534e5168-8baf-11ea-bc55-0242ac130003\",\n\t\"category\": \"A\",\n\t\"description\": \"Category A\",\n\t\"events\": [{\n\t\t\t\"name\": \"VICTORY\",\n\t\t\t\"operation\": \"+\",\n\t\t\t\"value\": 30\n\t\t},\n\t\t{\n\t\t\t\"name\": \"VICTORY_LEADER\",\n\t\t\t\"operation\": \"+\",\n\t\t\t\"value\": 50\n\t\t},\n\t\t{\n\t\t\t\"name\": \"DEFEAT\",\n\t\t\t\"operation\": \"+\",\n\t\t\t\"value\": 0\n\t\t}\n\t],\n\t\"players\": [{\n\t\t\t\"_id\": \"534e5168-8baf-11ea-bc55-0242ac130003\"\n\t\t},\n\t\t{\n\t\t\t\"_id\": \"f27263d6-8bb6-11ea-bc55-0242ac130003\"\n\t\t}\n\t]\n},\n{\n\t\"_id\": \"1d7b23e2-8c07-11ea-bc55-0242ac130003\",\n\t\"category\": \"B\",\n\t\"description\": \"Category B\",\n\t\"events\": [{\n\t\t\t\"name\": \"VICTORY\",\n\t\t\t\"operation\": \"+\",\n\t\t\t\"value\": 15\n\t\t},\n\t\t{\n\t\t\t\"name\": \"VICTORY_LEADER\",\n\t\t\t\"operation\": \"+\",\n\t\t\t\"value\": 30\n\t\t},\n\t\t{\n\t\t\t\"name\": \"DEFEAT\",\n\t\t\t\"operation\": \"+\",\n\t\t\t\"value\": 0\n\t\t}\n\t],\n\t\"players\": []\n}]"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/v1/categories",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "v1",
+                                "categories"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Challenges",
+            "item": [
+                {
+                    "name": "Payload Examples (Challenges)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "// /challenges\n[{\n\t\"_id\": \"1f35042a-8bba-11ea-bc55-0242ac130003\",\n\t\"challengeDateTime\": \"2020-05-04 18:00:00\",\n\t\"status\": \"REALIZED\",\n\t\"requestDateTime\": \"2020-04-25 08:30:00\",\n\t\"responseDateTime\": \"2020-04-26 08:30:00\",\n\t\"requester\": \"534e5168-8baf-11ea-bc55-0242ac130003\",\n\t\"category\": \"A\",\n\t\"players\": [{\n\t\t\t\"_id\": \"534e5168-8baf-11ea-bc55-0242ac130003\"\n\t\t},\n\t\t{\n\t\t\t\"_id\": \"f27263d6-8bb6-11ea-bc55-0242ac130003\"\n\t\t}\n\t],\n\t\"match\": {\n\t\t\"_id\": \"1f35042a-8bba-11ea-bc55-0242ac130003\",\n\t\t\"def\": \"534e5168-8baf-11ea-bc55-0242ac130003\",\n\t\t\"result\": [{\n\t\t\t\"set\": \"6-1\"\n\t\t}, {\n\t\t\t\"set\": \"6-3\"\n\t\t}],\n\t\t\"players\": [{\n\t\t\t\t\"_id\": \"534e5168-8baf-11ea-bc55-0242ac130003\"\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"_id\": \"f27263d6-8bb6-11ea-bc55-0242ac130003\"\n\t\t\t}\n\t\t]\n\t}\n},\n{\n\t\"_id\": \"1f35042a-8bba-11ea-bc55-0242ac130003\",\n\t\"challengeDateTime\": \"2020-06-01 18:00:00\",\n\t\"status\": \"PENDING\",\n\t\"requestDateTime\": \"2020-05-20 08:30:00\",\n\t\"responseDateTime\": \"\",\n\t\"requester\": \"884e5168-8baf-11ea-bc55-0242ac130003\",\n\t\"category\": \"B\",\n\t\"players\": [{\n\t\t\t\"_id\": \"884e5168-8baf-11ea-bc55-0242ac130003\"\n\t\t},\n\t\t{\n\t\t\t\"_id\": \"997263d6-8bb6-11ea-bc55-0242ac130003\"\n\t\t}\n\t],\n\t\"match\": {}\n},\n{\n\t\"_id\": \"1f35042a-8bba-11ea-bc55-0242ac130003\",\n\t\"challengeDateTime\": \"2020-01-10 18:00:00\",\n\t\"status\": \"DENIED\",\n\t\"responseDateTime\":\"2020-01-05 08:30:00\",\n\t\"requestDateTime\": \"2020-01-01 08:30:00\",\n\t\"requester\": \"534e5168-8baf-11ea-bc55-0242ac130003\",\n\t\"players\": [{\n\t\t\t\"_id\": \"884e5168-8baf-11ea-bc55-0242ac130003\"\n\t\t},\n\t\t{\n\t\t\t\"_id\": \"997263d6-8bb6-11ea-bc55-0242ac130003\"\n\t\t}\n\t],\n\t\"category\": \"A\",\n\t\"match\": {}\n}]"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/v1/challenges",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "v1",
+                                "challenges"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Players Examples",
+            "item": [
+                {
+                    "name": "Payload Examples (Players Examples)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "// Consult all players\n// Consult player by email\n// Insert/Update Player\n// Delete Player\n[{\n\t\"_id\": \"534e5168-8baf-11ea-bc55-0242ac130003\",\n\t\"phoneNumber\": \"+5511994604784\",\n\t\"email\": \"diegofsilva.fernandes@gmail.com\",\n\t\"name\": \"Diego Silva\",\n\t\"playerPhotoUrl\": \"www.google.com.br/foto.jpg\",\n\t\"performance\": [{\n\t\t\"category\": \"A\",\n\t\t\"wins\": 5,\n\t\t\"losses\": 1,\n\t\t\"points\": 100\n\t},\n\t{\n\t\t\"category\": \"B\",\n\t\t\"wins\": 30,\n\t\t\"losses\": 5,\n\t\t\"points\": 1200\n\t}]\n},\n{\n\t\"_id\": \"f27263d6-8bb6-11ea-bc55-0242ac130003\",\n\t\"phoneNumber\": \"+5511994604784\",\n\t\"email\": \"diegofsilva.smartranking@gmail.com\",\n\t\"name\": \"João Nogueira\",\n\t\"playerPhotoUrl\": \"www.google.com.br/foto.jpg\",\n\t\"performance\": [{\n\t\t\"category\": \"A\",\n\t\t\"wins\": 10,\n\t\t\"losses\": 0,\n\t\t\"points\": 500\n\t}]\n}]"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/v1/players",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "v1",
+                                "players"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Matches",
+            "item": [
+                {
+                    "name": "Payload Examples (Matches)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "// /challenges/:id/matches/\n[{\n\t\"_id\": \"1f35042a-8bba-11ea-bc55-0242ac130003\",\n\t\"def\": \"534e5168-8baf-11ea-bc55-0242ac130003\",\n\t\"result\": [{\n\t\t\"set\": \"6-1\"\n\t}, {\n\t\t\"set\": \"6-3\"\n\t}],\n\t\"players\": [{\n\t\t\t\"_id\": \"534e5168-8baf-11ea-bc55-0242ac130003\"\n\t\t},\n\t\t{\n\t\t\t\"_id\": \"f27263d6-8bb6-11ea-bc55-0242ac130003\"\n\t\t}\n\t]\n},\n{\n\t\"_id\": \"1f35042a-8bba-11ea-bc55-0242ac130003\",\n\t\"def\": \"534e5168-8baf-11ea-bc55-0242ac130003\",\n\t\"result\": [{\n\t\t\"set\": \"6-1\"\n\t}, {\n\t\t\"set\": \"4-6\"\n\t}, {\n\t\t\"set\": \"6-1\"\n\t}],\n\t\"players\": [{\n\t\t\t\"_id\": \"534e5168-8baf-11ea-bc55-0242ac130003\"\n\t\t},\n\t\t{\n\t\t\t\"_id\": \"f27263d6-8bb6-11ea-bc55-0242ac130003\"\n\t\t}\n\t]\n}]"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/v1/matches",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "v1",
+                                "matches"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Rankings",
+            "item": [
+                {
+                    "name": "Payload Examples (Rankings)",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "// Rankings - use lodash to build the ranking\n[{\n\t\"challenge\": \"\",\n\t\"match\": \"\",\n\t\"category\": \"A\",\n\t\"player\": \"534e5168-8baf-11ea-bc55-0242ac130003\",\n\t\"event\": \"VICTORY\",\n\t\"operation\": \"+\",\n\t\"points\": \"100\"\n},\n{\n\t\"challenge\": \"\",\n\t\"match\": \"\",\n\t\"category\": \"A\",\n\t\"player\": \"534e5168-8baf-11ea-bc55-0242ac130003\",\n\t\"event\": \"VICTORY_LEADER\",\n\t\"operation\": \"+\",\n\t\"points\": \"100\"\n},\n{\n\t\"challenge\": \"\",\n\t\"match\": \"\",\n\t\"category\": \"A\",\n\t\"player\": \"534e5168-8baf-11ea-bc55-0242ac130003\",\n\t\"event\": \"DEFEAT\",\n\t\"operation\": \"+\",\n\t\"points\": \"0\"\n}]"
+                        },
+                        "url": {
+                            "raw": "http://localhost:3000/api/v1/rankings",
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "3000",
+                            "path": [
+                                "api",
+                                "v1",
+                                "rankings"
+                            ]
+                        }
+                    },
+                    "response": []
+                }
+            ]
+        }
+    ]
 }
